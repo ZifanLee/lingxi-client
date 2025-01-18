@@ -35,3 +35,76 @@
     -fx-text-fill: #ff0000;
     -fx-font-size: 12px;
 }
+
+.info-label {
+    -fx-text-fill: #CCCCCC;
+    -fx-font-size: 16px;
+}
+
+.hyperlink {
+    -fx-text-fill: #1E90FF; /* 链接颜色 */
+    -fx-underline: true; /* 显示下划线 */
+    -fx-font-size: 16px; /* 字体大小 */
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #0077cc; /* 鼠标悬停时的颜色 */
+}
+
+/* 主要按钮样式 */
+.primary-button {
+    -fx-background-color: #336699;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.primary-button:hover {
+    -fx-background-color: #99CCFF;
+}
+
+/* 次要按钮样式 */
+.secondary-button {
+    -fx-background-color: #99CCFF;
+    -fx-text-fill: #336699;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #336699;
+    -fx-text-fill: white;
+}
+
+/* 输入框样式 */
+.input-field {
+    -fx-pref-width: 200px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+    -fx-border-color: #99CCFF;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/* 列表视图样式 */
+.list-view {
+    -fx-pref-height: 600px;
+    -fx-border-color: #99CCFF;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/* 聊天框样式 */
+.chat-area {
+    -fx-pref-height: 500px;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #99CCFF;
+    -fx-border-width: 1px;
+    -fx-font-size: 14px;
+}

@@ -4,11 +4,18 @@ import com.zifan.lingxiclient.model.User;
 import com.zifan.lingxiclient.service.AuthService;
 import com.zifan.lingxiclient.util.ValidationUtil;
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.Label;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class RegisterController {
+    public Hyperlink loginButton;
+    public Button register;
+    public PasswordField confirmPasswordField;
     @FXML private TextField emailField;
     @FXML private TextField usernameField;
     @FXML private PasswordField passwordField;
@@ -30,7 +37,6 @@ public class RegisterController {
         User user = new User();
         user.setEmail(email);
         user.setUsername(username);
-        user.setPassword(password);
 
         try {
             if (authService.register(user)) {
@@ -47,5 +53,24 @@ public class RegisterController {
     @FXML
     public void handleLogin() {
         // 跳转到登录界面
+        switchToLogin();
+    }
+
+    private void switchToLogin() {
+        try {
+            // 加载登录界面的FXML文件
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/zifan/lingxiclient/view/login.fxml"));
+            Parent root = loader.load();
+
+            // 获取当前的Stage
+            Stage stage = (Stage) loginButton.getScene().getWindow();
+
+            // 创建新的Scene并设置到Stage
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

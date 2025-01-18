@@ -1,32 +1,37 @@
 package com.zifan.lingxiclient.model;
 
+import lombok.Data;
+
+import java.time.LocalDateTime;
+
+
+@Data
 public class User {
-    private String email;
-    private String password;
+
+    private Long id;
     private String username;
+    private String email;
 
-    // Getters and Setters
-    public String getEmail() {
-        return email;
-    }
+    private String passwordHash;
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    private String firstName;
 
-    public String getPassword() {
-        return password;
-    }
+    private String lastName;
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+    private String phone;
 
-    public String getUsername() {
-        return username;
-    }
+    private Integer status = 1; // 默认启用
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+    private String role = "USER"; // 默认角色
+
+    private LocalDateTime createdAt = LocalDateTime.now();
+
+    private LocalDateTime updatedAt = LocalDateTime.now();
+
+    private LocalDateTime lastLoginAt;
+
+    private String avatarUrl;
+
+    private String bio;
+
 }

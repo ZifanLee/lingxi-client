@@ -1,3 +1,3 @@
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.0.13.jdk/Contents/Home
+export JAVA_HOME=/Users/lizifan/Library/Java/JavaVirtualMachines/openjdk-23.0.1/Contents/Home
 cd ..
 mvn clean javafx:run -e

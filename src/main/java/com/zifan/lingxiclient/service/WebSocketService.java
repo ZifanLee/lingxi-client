@@ -9,8 +9,9 @@ import java.net.URI;
 public class WebSocketService {
     private WebSocketClient webSocketClient;
 
-    public void connect() {
-        String websocketUrl = AppConfig.getProperty("websocket.url");
+    public void connect(String token) {
+        // 将 token 附加到 WebSocket URL
+        String websocketUrl = AppConfig.getProperty("websocket.url") + "?token=" + token;
         webSocketClient = new WebSocketClient(URI.create(websocketUrl)) {
             @Override
             public void onOpen(ServerHandshake handshakedata) {
@@ -20,8 +21,6 @@ public class WebSocketService {
             @Override
             public void onMessage(String message) {
                 System.out.println("Received message: " + message);
-                // 将消息显示在聊天窗口中
-                // 可以通过回调或事件总线实现
             }
 
             @Override

@@ -9,9 +9,12 @@ import com.zifan.lingxiclient.service.WebSocketService;
 public class MainView {
     private Stage primaryStage;
     private WebSocketService webSocketService;
+    private String token; // 用于存储登录成功后返回的 token
 
-    public MainView(Stage primaryStage) {
+    // 构造函数，接收 Stage 和 token
+    public MainView(Stage primaryStage, String token) {
         this.primaryStage = primaryStage;
+        this.token = token;
         this.webSocketService = new WebSocketService();
     }
 
@@ -28,8 +31,8 @@ public class MainView {
             primaryStage.setTitle("Lingxi Client - Main");
             primaryStage.show();
 
-            // 初始化 WebSocket 连接
-            webSocketService.connect();
+            // 使用 token 建立 WebSocket 连接
+            webSocketService.connect(token);
         } catch (Exception e) {
             e.printStackTrace();
         }

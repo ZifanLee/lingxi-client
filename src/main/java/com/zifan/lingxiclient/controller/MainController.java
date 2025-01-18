@@ -4,33 +4,51 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import com.zifan.lingxiclient.service.WebSocketService;
+import javafx.scene.image.ImageView;
+import javafx.scene.control.Label;
 
 public class MainController {
-    @FXML private ListView<String> friendList;
-    @FXML private TextArea chatArea;
-    @FXML private TextField messageField;
-
-    private WebSocketService webSocketService;
-
-    public void initialize() {
-        // 初始化好友列表
-        friendList.getItems().addAll("Friend 1", "Friend 2", "Friend 3");
-
-        // 初始化 WebSocket 服务
-        webSocketService = new WebSocketService();
-        webSocketService.connect();
-    }
+    @FXML
+    private ListView<String> friendList;
 
     @FXML
-    public void handleSendMessage() {
+    private TextArea chatArea;
+
+    @FXML
+    private TextField messageField;
+
+    @FXML
+    private ImageView friendAvatar;
+
+    @FXML
+    private Label friendName;
+
+    @FXML
+    private void handleSendMessage() {
         String message = messageField.getText();
         if (!message.isEmpty()) {
             chatArea.appendText("You: " + message + "\n");
             messageField.clear();
-
-            // 通过 WebSocket 发送消息
-            webSocketService.sendMessage(message);
         }
+    }
+
+    @FXML
+    private void handleAddFriend() {
+        // 处理添加好友逻辑
+    }
+
+    @FXML
+    private void handleRemoveFriend() {
+        // 处理移除好友逻辑
+    }
+
+    @FXML
+    private void handleProfile() {
+        // 处理个人资料逻辑
+    }
+
+    @FXML
+    private void handlePreferences() {
+        // 处理偏好设置逻辑
     }
 }
