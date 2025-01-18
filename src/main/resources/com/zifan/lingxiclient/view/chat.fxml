@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.zifan.lingxiclient.controller.ChatController"
+            prefHeight="500.0" prefWidth="800.0">
+
+    <ListView fx:id="friendList" layoutX="10" layoutY="10" prefWidth="150" prefHeight="480"/>
+    <TextArea fx:id="chatArea" editable="false" wrapText="true" layoutX="170" layoutY="10" prefWidth="620" prefHeight="400"/>
+    <TextField fx:id="messageField" promptText="Type a message..." layoutX="170" layoutY="420" prefWidth="540"/>
+    <Button text="Send" onAction="#handleSendMessage" layoutX="720" layoutY="420" prefWidth="70"/>
+</AnchorPane>

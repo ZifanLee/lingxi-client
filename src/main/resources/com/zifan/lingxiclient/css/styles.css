@@ -1,0 +1,37 @@
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: #1E90FF;
+}
+
+.input-field {
+    -fx-font-size: 14px;
+    -fx-pref-width: 200px;
+    -fx-padding: 10px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #1E90FF;
+}
+
+.primary-button {
+    -fx-background-color: #1E90FF;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+}
+
+.secondary-button {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #1E90FF;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #1E90FF;
+    -fx-border-radius: 5px;
+}
+
+.error-label {
+    -fx-text-fill: #ff0000;
+    -fx-font-size: 12px;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="root" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zifan.lingxiclient.controller.RegisterController">
+    <center>
+        <VBox alignment="CENTER" spacing="20" style="-fx-background-color: #f0f8ff;">
+            <Text text="Register" styleClass="title"/>
+            <TextField fx:id="emailField" promptText="Email" styleClass="input-field"/>
+            <TextField fx:id="usernameField" promptText="Username" styleClass="input-field"/>
+            <PasswordField fx:id="passwordField" promptText="Password" styleClass="input-field"/>
+            <Label fx:id="errorLabel" styleClass="error-label"/>
+            <Button text="Register" onAction="#handleRegister" styleClass="primary-button"/>
+            <Button text="Login" onAction="#handleLogin" styleClass="secondary-button"/>
+        </VBox>
+    </center>
+</BorderPane>

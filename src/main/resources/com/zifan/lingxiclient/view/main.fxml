@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zifan.lingxiclient.controller.MainController">
+    <left>
+        <!-- 好友列表 -->
+        <VBox style="-fx-background-color: #f0f8ff; -fx-padding: 10px;">
+            <Label text="Friends" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+            <ListView fx:id="friendList" style="-fx-pref-width: 200px;"/>
+        </VBox>
+    </left>
+    <center>
+        <!-- 聊天窗口 -->
+        <VBox style="-fx-padding: 10px;">
+            <Label fx:id="chatTitle" text="Chat" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+            <TextArea fx:id="chatArea" editable="false" style="-fx-pref-height: 600px;"/>
+            <HBox spacing="10">
+                <TextField fx:id="messageField" promptText="Type a message..." style="-fx-pref-width: 400px;"/>
+                <Button text="Send" onAction="#handleSendMessage" style="-fx-background-color: #1E90FF; -fx-text-fill: white;"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
